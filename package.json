@@ -1,0 +1,25 @@
+{
+  "name": "rubot",
+  "version": "0.0.1",
+  "description": "What time is it? RU and English",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/neurosnap/telegram-rubot"
+  },
+  "keywords": [
+    "telegram",
+    "russian",
+    "english",
+    "bot"
+  ],
+  "author": "Eric Bower <neurosnap@gmail.com> (http://neurosnap.net)",
+  "license": "MIT",
+  "dependencies": {
+    "moment-timezone": "^0.4.0",
+    "node-telegram-bot-api": "^0.12.1"
+  }
+}
