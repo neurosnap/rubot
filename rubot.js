@@ -31,5 +31,27 @@ bot.on('text', function(msg) {
     time = moment().tz(timezone).format(format);
   }
 
+  var tz_i = msg.text.indexOf("/tz");
+  if (tz_i >= 0) {
+    timezone = msg.text.slice(tz_i + 3).trim();
+    console.log(timezone);
+
+    if (timezone == "list") {
+      return bot.sendMessage(chatId, listToStrings(moment.tz.names()));
+    }
+
+    time = moment().tz(timezone).format(format);
+  }
+
   bot.sendMessage(chatId, time);
 });
+
+function listToString(arr) {
+  var content = "";
+
+  for (var i = 0; i < arr.length; i++) {
+    content += arr[i] + "\n";
+  }
+
+  return content;
+}
